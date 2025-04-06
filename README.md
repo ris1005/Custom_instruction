@@ -28,18 +28,20 @@ result = (a + b) * (c - d);
 📤 Example Output 
 Custom instruction: maddsub result, a, b, c, d
 
+
 ⚙️ Build and Run Instructions
 1. Save the Files
-parser.y (Bison file)
-lexer.l (Flex file)
+   parser.y (Bison file)
+   lexer.l (Flex file)
 
 2. Compile the Parser
-Use the following commands in your terminal:
-bison -d parser.y         # Generates parser.tab.c and parser.tab.h
-flex lexer.l              # Generates lex.yy.c
-gcc -o parser parser.tab.c lex.yy.c -lfl
+  Use the following commands in your terminal:
+  bison -d parser.y         # Generates parser.tab.c and parser.tab.h
+  flex lexer.l              # Generates lex.yy.c
+  gcc -o parser parser.tab.c lex.yy.c -lfl
 3. Run the Parser
-   ./parser
+    ./parser
 Then enter the test expression:
 result = (a + b) * (c - d);
 Output:maddsub result, a, b, c, d
+
