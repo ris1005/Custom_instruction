@@ -27,18 +27,21 @@ The parser is designed to recognize arithmetic expressions of the exact form:
 result = (a + b) * (c - d);
 📤 Example Output 
 Custom instruction: maddsub result, a, b, c, d
-
+---
+---
+Github link: https://github.com/ris1005/Custom_instruction
+---
 
 ⚙️ Build and Run Instructions
 1. Save the Files
-*  parser.y (Bison file)
-*  lexer.l (Flex file)
+*  instgen.y (Bison file)
+*  exprscan.l (Flex file)
 
 4. Compile the Parser
 5. Use the following commands in your terminal:
-* bison -d parser.y         # Generates parser.tab.c and parser.tab.h
-* flex lexer.l              # Generates lex.yy.c
-* gcc -o parser parser.tab.c lex.yy.c -lfl
+* bison -d instgen.y         # Generates parser.tab.c and parser.tab.h
+* flex exprscan.l              # Generates lex.yy.c
+* gcc -o parser instgen.tab.c lex.yy.c -lfl
   
 6. Run the Parser
 * ./parser
