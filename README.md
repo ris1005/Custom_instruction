@@ -35,13 +35,17 @@ Custom instruction: maddsub result, a, b, c, d
 *  lexer.l (Flex file)
 
 4. Compile the Parser
-  Use the following commands in your terminal:
-  bison -d parser.y         # Generates parser.tab.c and parser.tab.h
-  flex lexer.l              # Generates lex.yy.c
-  gcc -o parser parser.tab.c lex.yy.c -lfl
-5. Run the Parser
-    ./parser
-Then enter the test expression:
-result = (a + b) * (c - d);
-Output:maddsub result, a, b, c, d
+5. Use the following commands in your terminal:
+* bison -d parser.y         # Generates parser.tab.c and parser.tab.h
+* flex lexer.l              # Generates lex.yy.c
+* gcc -o parser parser.tab.c lex.yy.c -lfl
+  
+6. Run the Parser
+* ./parser
+* Enter expression:result = (a + b) * (c - d);
+You will see output:
+Custom instruction: maddsub result, a, b, c, d
+
+
+
 
